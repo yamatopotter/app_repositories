@@ -1,5 +1,7 @@
 package br.com.matheus.projetofinal.data.model
 
+import com.google.gson.annotations.SerializedName
+
 data class Repo (
     val id: Long,
     val nodeID: String,
@@ -7,6 +9,7 @@ data class Repo (
     val fullName: String,
     val private: Boolean,
     val owner: Owner,
+    @SerializedName("html_url")
     val htmlURL: String,
     val description: String,
     val fork: Boolean,
@@ -27,6 +30,7 @@ data class Repo (
     val treesURL: String,
     val statusesURL: String,
     val languagesURL: String,
+    @SerializedName("stargazers_count")
     val stargazersURL: String,
     val contributorsURL: String,
     val subscribersURL: String,
